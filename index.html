@@ -177,6 +177,9 @@ p{margin:0 0 14px;}
 .chk-item.on .chk-lbl{color:var(--ink-mute);text-decoration:line-through;}
 .chk-lbl{font-size:14.5px;line-height:1.5;transition:color .2s ease;}
 .chk-foot{padding:13px 20px;background:var(--paper);border-top:1px solid var(--line);font-size:13.5px;font-weight:600;}
+.chk-group-h{display:flex;align-items:center;gap:10px;padding:11px 20px;background:var(--paper);border-top:1px solid var(--line);}
+.chk-group-h:first-child{border-top:none;}
+.chk-group-note{font-size:11.5px;color:var(--ink-mute);}
 
 /* ACORDEON EXCEPCIONES */
 .acc{background:#fff;border:1px solid var(--line);border-radius:8px;margin-bottom:10px;overflow:hidden;}
@@ -514,13 +517,16 @@ footer{max-width:1280px;margin:0 auto;padding:26px clamp(16px,3vw,32px) 40px;bor
       <p class="lede">Se verifica antes de bajar la minuta a producción. La minuta no se publica si algún punto queda sin marcar.<span class="only-js"> Pruébalo aquí para familiarizarte.</span></p>
 
       <div class="chk" id="chk">
+        <div class="chk-group-h"><span class="who-chip">Kimberly · Consolidador</span><span class="chk-group-note">Arma la minuta</span></div>
         <div class="chk-item"><div class="chk-box">✓</div><div class="chk-lbl">Los cuatro flujos de pedido fueron consolidados en una sola minuta.</div></div>
         <div class="chk-item"><div class="chk-box">✓</div><div class="chk-lbl">Todas las líneas tienen los siete campos obligatorios completos.</div></div>
         <div class="chk-item"><div class="chk-box">✓</div><div class="chk-lbl">Los encargos con fecha comprometida para el día siguiente están incluidos.</div></div>
         <div class="chk-item"><div class="chk-box">✓</div><div class="chk-lbl">Si es viernes, el remanente de insumos de ciclo semanal quedó registrado.</div></div>
+        <div class="chk-group-h"><span class="who-chip">Carolina · Validador</span><span class="chk-group-note">Aprueba y publica</span></div>
         <div class="chk-item"><div class="chk-box">✓</div><div class="chk-lbl">La minuta fue revisada y validada por el rol Validador.</div></div>
+        <div class="chk-item"><div class="chk-box">✓</div><div class="chk-lbl">La minuta quedó publicada antes de la hora límite definida en el punto 3.6.</div></div>
+        <div class="chk-group-h"><span class="who-chip">Benjamín · Receptor en fábrica</span><span class="chk-group-note">Recibe y reparte</span></div>
         <div class="chk-item"><div class="chk-box">✓</div><div class="chk-lbl">La asignación de trabajo por pastelero está hecha.</div></div>
-        <div class="chk-item"><div class="chk-box">✓</div><div class="chk-lbl">La minuta quedó publicada antes de la hora límite.</div></div>
         <div class="chk-item"><div class="chk-box">✓</div><div class="chk-lbl">El Receptor en fábrica confirmó la recepción.</div></div>
         <div class="chk-foot" id="chkFoot">0 de 8 puntos verificados</div>
       </div>
@@ -535,7 +541,7 @@ footer{max-width:1280px;margin:0 auto;padding:26px clamp(16px,3vw,32px) 40px;bor
       <p class="lede">Situaciones que se salen del flujo normal. El propósito es que quien esté de turno pueda resolver sin depender de gerencia.<span class="only-js"> Toca cada situación.</span></p>
 
       <div class="acc"><button class="acc-h"><span class="acc-ic">!</span><span class="acc-t">Pedido recibido fuera de la hora de corte</span><span class="acc-c">▼</span></button>
-        <div class="acc-b"><div class="acc-in"><p>El Consolidador valida la capacidad de producción e informa a la sucursal que realizó el pedido.</p><span class="who-chip">Autoriza · Kimberly</span></div></div></div>
+        <div class="acc-b"><div class="acc-in"><p>El Receptor en fábrica valida la capacidad de producción e informa a la sucursal que realizó el pedido.</p><span class="who-chip">Autoriza · Benjamín</span></div></div></div>
 
       <div class="acc"><button class="acc-h"><span class="acc-ic">!</span><span class="acc-t">Encargo urgente para el día siguiente</span><span class="acc-c">▼</span></button>
         <div class="acc-b"><div class="acc-in"><p>El Consolidador valida la capacidad de producción e informa a la sucursal que realizó el pedido.</p><span class="who-chip">Autoriza · Kimberly</span></div></div></div>
@@ -544,7 +550,7 @@ footer{max-width:1280px;margin:0 auto;padding:26px clamp(16px,3vw,32px) 40px;bor
         <div class="acc-b"><div class="acc-in"><p>Consulta al Receptor en fábrica antes de iniciar. No decide por cuenta propia ni detiene el resto de su producción.</p><span class="who-chip">Autoriza · Receptor en fábrica</span></div></div></div>
 
       <div class="acc"><button class="acc-h"><span class="acc-ic">!</span><span class="acc-t">Insumo faltante para cumplir la minuta</span><span class="acc-c">▼</span></button>
-        <div class="acc-b"><div class="acc-in"><p>Se comunica con prioridad a Gerencia para la toma de acciones.</p><span class="who-chip">Autoriza · Carolina</span></div></div></div>
+        <div class="acc-b"><div class="acc-in"><p>Se verifica con el Receptor en fábrica antes de tomar cualquier acción. No se reemplaza el insumo por cuenta propia.</p><span class="who-chip">Autoriza · Benjamín</span></div></div></div>
 
       <div class="pnav"><button class="btn btn-ghost" data-go="5">← Anterior</button><button class="btn btn-primary" data-go="7">Siguiente →</button></div>
     </section>
@@ -615,7 +621,7 @@ footer{max-width:1280px;margin:0 auto;padding:26px clamp(16px,3vw,32px) 40px;bor
         </div>
         <div class="sq">
           <div class="sq-q">6. Falta un insumo para poder cumplir con la minuta del día. ¿Qué corresponde hacer?</div>
-          <div class="sq-a"><span class="sq-ic">✓</span><p><strong>Comunicarlo con prioridad a Gerencia.</strong> La autorización corresponde a Carolina. No se reemplaza el insumo por cuenta propia.</p></div>
+          <div class="sq-a"><span class="sq-ic">✓</span><p><strong>Verificarlo con el Receptor en fábrica.</strong> La autorización corresponde a Benjamín. No se reemplaza el insumo por cuenta propia.</p></div>
         </div>
         <div class="sq">
           <div class="sq-q">7. ¿Puede bajar una minuta a producción sin pasar por validación?</div>
@@ -765,10 +771,10 @@ const Q = [
     no: "El Receptor en fábrica recibe la minuta, confirma su recepción y distribuye el trabajo entre los pasteleros. Hoy ese rol lo ejerce Benjamín." },
 
   { q: "Falta un insumo para poder cumplir con la minuta del día. ¿Qué corresponde hacer?",
-    o: ["Reemplazarlo por otro parecido", "Comunicarlo con prioridad a Gerencia", "Producir lo que se pueda y no avisar", "Esperar al día siguiente"],
+    o: ["Reemplazarlo por otro parecido", "Verificarlo con el Receptor en fábrica", "Producir lo que se pueda y no avisar", "Esperar al día siguiente"],
     c: 1,
-    ok: "Correcto. Se comunica con prioridad a Gerencia para la toma de acciones.",
-    no: "Se comunica con prioridad a Gerencia para la toma de acciones. La autorización en este caso corresponde a Carolina — no se reemplaza el insumo por cuenta propia." },
+    ok: "Correcto. Se verifica con el Receptor en fábrica antes de tomar cualquier acción.",
+    no: "Se verifica con el Receptor en fábrica, hoy Benjamín, antes de tomar cualquier acción. No se reemplaza el insumo por cuenta propia ni se produce a medias sin avisar." },
 
   { q: "¿Puede bajar una minuta a producción sin pasar por validación?",
     o: ["Sí, si viene completa", "Sí, cuando hay apuro", "No, ninguna minuta baja sin validación previa", "Solo los fines de semana"],
