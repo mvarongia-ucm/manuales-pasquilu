@@ -609,7 +609,7 @@ footer{max-width:1280px;margin:0 auto;padding:26px clamp(16px,3vw,32px) 40px;bor
         </div>
         <div class="sq">
           <div class="sq-q">3. Un cliente quiere encargar una torta para el domingo. ¿Qué corresponde?</div>
-          <div class="sq-a"><span class="sq-ic">✓</span><p><strong>No comprometerla sin stock previo.</strong> La fábrica produce de lunes a viernes. Ningún pedido se compromete para el fin de semana si no hay stock producido con anterioridad.</p></div>
+          <div class="sq-a"><span class="sq-ic">✓</span><p><strong>No comprometer hasta verificar el stock.</strong> La fábrica produce de lunes a viernes. Ningún pedido se compromete para el fin de semana si no hay stock producido con anterioridad.</p></div>
         </div>
         <div class="sq">
           <div class="sq-q">4. El pastelero detecta que su minuta está incompleta. ¿Qué debe hacer?</div>
@@ -753,7 +753,7 @@ const Q = [
     no: "No es válida. Cada línea de la minuta debe tener los siete campos obligatorios: producto, cantidad, tamaño o formato, peso, decoración, destino y observaciones. “1 cheesecake” no indica el tamaño, así que el pastelero tendría que consultar o decidir por su cuenta." },
 
   { q: "Un cliente quiere encargar una torta para el domingo. ¿Qué corresponde?",
-    o: ["Aceptar, la fábrica produce todos los días", "No comprometerla si no hay stock producido antes", "Aceptar y avisar el lunes", "Derivar siempre a Gerencia"],
+    o: ["Aceptar, la fábrica produce todos los días", "No comprometer hasta verificar el stock", "Aceptar y avisar el lunes", "Derivar siempre a Gerencia"],
     c: 1,
     ok: "Correcto. La fábrica produce de lunes a viernes: sin stock previo, no se compromete.",
     no: "La fábrica produce de lunes a viernes. Ningún pedido puede comprometerse para entrega en fin de semana si no existe stock producido con anterioridad. Esta regla aplica también al asistente virtual del canal digital." },
